@@ -23,3 +23,7 @@ versa. Day switches are the approximate number of 23:59 -> 00:00 switches, i.e.
 the probability of a single moon phase being assigned to the wrong date in a
 specific time zone. It is approximate as I don't factor in daylight savings time
 switches and don't compute it for 15- and 30- minute time zones.
+
+Note: The "Astronomical Algorithms" algorithm won't give good approximations for
+waxing/waning crescent/gibbous, hence it's not an appropriate algorithm to use
+if you need this.

@@ -16,7 +16,7 @@
 ;(def dt-fmt (DateTimeFormatter/ofPattern "yyyy-MM-ddThh:mm:ssZ"))
 
 (defn compute [args]
-  (let [results (->> (moon/phase-seq start)
+  (let [results (->> (moon/phase-seq {:time start})
                      (filter #(contains? phase-map (:phase %)))
                      (take-while #(zdt/is-before (:time %) stop)))]
     (doseq [{:keys [time phase]} results]

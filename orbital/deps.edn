@@ -1,3 +1,3 @@
 {:paths ["src"]
- :deps {io.olympos/selene {:local/root "../../clj-selene"}}
+ :deps {io.olympos/selene {:mvn/version "1.0.0"}}
  :aliases {:run {:exec-fn moon-phases/compute}}}
